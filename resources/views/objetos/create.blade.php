@@ -10,6 +10,16 @@
 
             <h1 class="flex flex-col text-center mb-2 p-2 w-full text-3xl font-extrabold text-gray-800 border bg-gray-100">Fazendo uma doação</h1>
             <div class="max-w-3xl m-auto mt-2 p-2">
+                @if ($errors->any())
+                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                        <strong class="font-bold">Erro!</strong>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <form action="{{ route('objetos.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-6">
@@ -23,10 +33,10 @@
                             name="descricao" placeholder="Descrição do objeto" required autofocus />
                     </div>
                     <div class="mb-6">
-                        <label class="font-medium mb-2" for="imagem">Selecione uma imagem</label>
-                        <input class="text-sm rounded-lg w-full p-2.5 border cursor-pointer bg-gray-100 border-blue-500"
-                            id="imagem" type="file" name="imagem" required autofocus>
-                    </div>
+        <label class="font-medium mb-2" for="imagem">Selecione uma imagem</label>
+        <input class="text-sm rounded-lg w-full p-2.5 border cursor-pointer bg-gray-100 border-blue-500"
+               id="imagem" type="file" name="imagem" required autofocus>
+    </div>
 
                     <div class="grid grid-cols-2 gap-4">
                         <div class="mb-6">
