@@ -14,7 +14,7 @@
                             publicou:
                         </a>
                         <img style="height: 400px; width:400px" class="md:w-full pt-2"
-                            src="/img/objetos/{{ $objeto->imagem }}" alt="Imagem do objeto" />
+                        src="{{ $objeto->imagem }}" alt="Imagem do objeto" />
                         </a>
                         <div class="p-5">
                             <h5 class="flex flex-col mb-2 text-2xl tracking-tight text-gray-900">

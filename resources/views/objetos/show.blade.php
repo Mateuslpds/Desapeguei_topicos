@@ -18,8 +18,7 @@
                     --->
                     <span class="text-2xl text-center bg-slate-100 w-full">Você está <b>agendando</b> o seguinte objeto: </span>
                 </div>
-                <img class="md:w-full" src="/img/objetos/{{ $objeto->imagem }}"
-                                            alt="Imagem do objeto" />
+                <img class="md:w-full" src="{{ $objeto->imagem }}" alt="Imagem do objeto" />
                 <h1 class="text-3xl font-bold items-center text-center font-mono text-blue-600 pt-2 cursor-pointer">{{ $objeto->nome }}</h1>
 
                 <div class="max-w-xl m-auto mt-2 p-2">
